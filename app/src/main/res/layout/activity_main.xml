@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1117">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMS Dashboard"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/buttonConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect Bluetooth"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <!-- Voltage Gauge -->
+            <com.github.anastr.speedviewlib.SpeedView
+                android:id="@+id/gaugeVoltage"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                app:sv_maxSpeed="300"
+                app:sv_speedTextColor="#FFFFFF"
+                app:sv_unit=" Volt"
+                app:sv_unitTextColor="#FFFFFF" />
+
+            <!-- Current Gauge -->
+
+            <!-- Power Gauge -->
+
+            <com.github.anastr.speedviewlib.SpeedView
+                android:id="@+id/gaugeCurrent"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                app:sv_maxSpeed="30"
+                app:sv_speedTextColor="#FFFFFF"
+                app:sv_unit=" Amp"
+                app:sv_unitTextColor="#FFFFFF" />
+        </LinearLayout>
+
+        <com.github.anastr.speedviewlib.SpeedView
+            android:id="@+id/gaugePower"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            app:sv_maxSpeed="5000"
+            app:sv_unit=" Watt"
+            app:sv_speedTextColor="#FFFFFF"
+            app:sv_unitTextColor="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <!-- Voltage Gauge -->
+            <com.github.anastr.speedviewlib.SpeedView
+                android:id="@+id/tvTemp"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                app:sv_maxSpeed="55"
+                app:sv_unit=" °C"
+                app:sv_speedTextColor="#FFFFFF"
+                app:sv_unitTextColor="#FFFFFF"/>
+
+            <!-- Current Gauge -->
+
+            <!-- Power Gauge -->
+
+            <com.github.anastr.speedviewlib.SpeedView
+                android:id="@+id/tvHumidity"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                app:sv_maxSpeed="100"
+                app:sv_speedTextColor="#FFFFFF"
+                app:sv_unit=" %"
+                app:sv_unitTextColor="#FFFFFF" />
+        </LinearLayout>
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvTemp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Temp: &#45;&#45; °C"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:padding="10dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvHumidity"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Humidity: &#45;&#45; %"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:padding="10dp"/>-->
+
+    </LinearLayout>
+</ScrollView>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:orientation="vertical"-->
+<!--    android:gravity="center"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonConnect"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Select and Connect"-->
+<!--        android:layout_margin="50dp"/>-->
+<!--    <ImageButton-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/start"-->
+<!--        android:src="@drawable/baseline_search_24"/>-->
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="32dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textViewData"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Waiting for data..."-->
+<!--            android:textSize="20sp" />-->
+<!--    </ScrollView>-->
+
+
+<!--</LinearLayout>-->
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:orientation="vertical"-->
+<!--    android:gravity="center"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonConnect"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Select and Connect" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewData"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Waiting for data..."-->
+<!--        android:textSize="20sp"-->
+<!--        android:layout_marginTop="32dp"/>-->
+
+<!--</LinearLayout>-->
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:id="@+id/main"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".MainActivity">-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Hello World!"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
